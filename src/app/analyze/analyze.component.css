@@ -1,17 +1,44 @@
+/* General Typography and Layout */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Card Styles */
 .card {
   border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   padding: 1.5rem;
   margin-bottom: 2rem;
   background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* Score Display */
 .score {
   font-size: 2.5rem;
   color: #16a34a;
   text-align: center;
 }
 
+/* Progress Bar */
 .bar {
   height: 1rem;
   background: #d1fae5;
@@ -22,10 +49,13 @@
 
 .bar-fill {
   width: 85%;
-  background: #16a34a;
   height: 100%;
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  border-radius: 9999px;
+  transition: width 0.4s ease;
 }
 
+/* Keyword Tags */
 .keywords {
   display: flex;
   flex-wrap: wrap;
@@ -34,12 +64,20 @@
 }
 
 .keyword {
-  background: #f3f4f6;
+  background: #e5e7eb;
   padding: 0.4rem 0.75rem;
-  border-radius: 0.375rem;
+  border-radius: 9999px;
   font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  transition: background-color 0.2s ease;
 }
 
+.keyword:hover {
+  background-color: #d1d5db;
+}
+
+/* Resume Text Area Display */
 .textarea {
   background: #f9fafb;
   padding: 1rem;
@@ -49,13 +87,29 @@
   line-height: 1.6;
 }
 
+/* Analyze Button */
 .btn {
   display: block;
   background: #16a34a;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 0.375rem;
-  margin: 1rem auto;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #15803d;
+  transform: scale(1.03);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
