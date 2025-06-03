@@ -1,0 +1,66 @@
+<!-- Flex container to hold both sections side by side -->
+<div class="upload-and-description-container">
+  <!-- Left: Resume upload -->
+  <section class="main-section">
+    <div class="content-wrapper">
+      <h1>Match Your Resume</h1>
+      <p>
+        Upload your resume and a job description to instantly see your match percentage,
+        matching keywords, and identify missing ones.
+      </p>
+      <div class="upload-box" (click)="fileInput.click()">
+        <img src="https://img.icons8.com/ios-glyphs/30/000000/upload.png" alt="Upload" />
+        <p><strong>Drag 'n' drop your resume here</strong><br />or click to select a file (PDF, DOC, DOCX)</p>
+        <input 
+          #fileInput 
+          type="file" 
+          accept=".pdf,.doc,.docx" 
+          style="display: none;" 
+          (change)="onFileSelected($event)" />
+      </div>
+    </div>
+  </section>
+
+  <section class="job-description-section">
+    <div class="content-wrapper">
+      <h2>Enter the job description</h2>
+      <p>Paste the job description you want to match against your resume. Our tool will analyze it to find relevant keywords.</p>
+      <textarea placeholder="Paste job description here..." rows="10"></textarea>
+    </div>
+  </section>
+
+</div>
+
+<!-- Centered Analyze button -->
+<div class="analyze-button-container">
+  <button (click)="onAnalyze()">Analyze</button>
+</div>
+
+<!-- Remaining sections -->
+<section class="features">
+  <div class="feature">
+    <h3>Instant Matching</h3>
+    <p>Get your resume-to-job description match score in seconds, saving you time and effort.</p>
+  </div>
+  <div class="feature">
+    <h3>Keyword Analysis</h3>
+    <p>See which keywords from the job description are present in your resume, highlighted for clarity.</p>
+  </div>
+  <div class="feature">
+    <h3>Optimize Your Resume</h3>
+    <p>Identify missing keywords and receive suggestions on how to improve your resume’s relevance.</p>
+  </div>
+  <div class="feature">
+    <h3>User-Friendly Interface</h3>
+    <p>Our intuitive design makes it easy for anyone to upload, analyze, and improve their resume.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Land Your Dream Job Faster</h2>
+  <p>
+    Don't let automated systems filter you out. Use Resume Matcher to ensure your application
+    speaks directly to what employers are looking for.
+  </p>
+  <button (click)="onGetStarted()">Get Started Now</button>
+</section>

@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  color: #2b7a78;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #2b7a78;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+nav a:hover,
+nav a.active {
+  color: #17252a;
+  border-bottom: 2px solid #17252a;
+}

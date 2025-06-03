@@ -1,0 +1,156 @@
+/* Container for both upload and job description */
+.upload-and-description-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+/* Section layout */
+.main-section,
+.job-description-section {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+/* Common wrapper for spacing and height alignment */
+.main-section .content-wrapper,
+.job-description-section .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* Headings */
+.main-section h1,
+.job-description-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #17252a;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Paragraphs */
+.main-section p,
+.job-description-section p {
+  color: #777;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Upload box */
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  border-radius: 10px;
+  color: #777;
+  cursor: pointer;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Job description textarea */
+.job-description-section textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Analyze button below both boxes */
+.analyze-button-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.analyze-button-container button {
+  padding: 12px 28px;
+  background-color: #2b7a78;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: 
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.analyze-button-container button:hover {
+  background-color: #22655f;
+  box-shadow: 0 4px 12px rgba(43, 122, 120, 0.4);
+  transform: scale(1.03);
+}
+
+
+/* Features section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.feature:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.03); /* subtle zoom */
+}
+
+
+.feature h3 {
+  margin-bottom: 10px;
+  color: #2b7a78;
+}
+
+/* CTA section */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta button {
+  padding: 12px 24px;
+  background-color: #2b7a78;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: #22655f;
+}
