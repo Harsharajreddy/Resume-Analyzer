@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(private router: Router) {}
 
-  onAnalyze() {
-    this.router.navigate(['/analyze']);
+  goToJobDescription() {
+    this.router.navigate(['/job-description']);
   }
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -27,4 +27,6 @@ export class HomeComponent {
     alert('Navigating to get started...');
     // Add more logic as needed
   }
+  
+
 }

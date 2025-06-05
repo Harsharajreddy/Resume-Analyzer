@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AnalyzeComponent } from './analyze/analyze.component';  // your analyze component
+import { AnalyzeComponent } from './analyze/analyze.component';  
+import { JobDescriptionComponent } from './job-description/job-description.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'job-description', component: JobDescriptionComponent },
   { path: 'analyze', component: AnalyzeComponent },
 ];
 

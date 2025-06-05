@@ -1,0 +1,24 @@
+<section class="job-description-section fade-in-on-load">
+  <div class="content-wrapper">
+    <h2>Job Details</h2>
+
+    <label>
+      Job Title
+      <input type="text" [(ngModel)]="jobTitle" placeholder="e.g. Frontend Developer" />
+    </label>
+
+    <label>
+      Industry
+      <input type="text" [(ngModel)]="industry" placeholder="e.g. Software, Finance, etc." />
+    </label>
+
+    <label>
+      Job Description
+      <textarea [(ngModel)]="jobDescription" rows="10" placeholder="Paste the job description here..."></textarea>
+    </label>
+
+    <div class="analyze-button-container">
+      <button (click)="analyze()">Analyze</button>
+    </div>
+  </div>
+</section>
